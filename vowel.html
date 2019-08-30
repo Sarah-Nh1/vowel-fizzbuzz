@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Vowel count</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>LET'S COUNT SOME VOWELS</h1>
+
+    <script>
+    var w = prompt("Write any word or sentence.");
+    console.log(w);
+
+    var myvowels = [];
+    //
+
+    for (var t=0; t<=w.length; t++)
+    { 
+        var y = w[t];
+       if (y == "a" || y == "e" || y == "i" || y == "o" || y == "u") 
+       {
+        myvowels.push(y);   
+       }    
+         
+    }
+    console.log(myvowels);
+    </script>
+</body>
+</html>
