@@ -8,29 +8,67 @@
     <h1>LET'S COUNT SOME VOWELS</h1>
 
     <script>
-    var w = prompt("Write any word or sentence.");
-    console.log(w);
-
-    var myvowels = [];
-    //var dupcount;
-    var both = [];
-
-    for (var t=0; t<=w.length; t++)
-    { //to pick out vowels
-        var y = w[t];
+    
+    function pickVowel()
+    {
+        
        if (y == "a" || y == "e" || y == "i" || y == "o" || y == "u") 
        {
-        myvowels.push(y);   
-       }    
-       //if ()
-      // {
-
-       //}
-    }console.log(myvowels);
-
-    //both.push(myvowels, dupcount);
-    //console.log(both)
+           if ((vow.includes('y'))){
+            console.log(y)
+           }
+           else{
+            vow.push(y);
+           }
+            
+       } 
+       
+    } 
     
-    </script>
+    function getFrequency(string)
+    {
+        var freq = {};
+        for (var i=0; i<string.length;i++) 
+        {
+        var letter = string.charAt(i);
+        if (freq[letter])
+         {
+        freq[letter]++;
+         } else 
+         {
+        freq[letter] = 1;
+         }
+         if (freq[letter] != 1)
+        {
+            dupCount += 1;
+        }
+        }
+        return freq;
+        
+    };
+    
+    var dupCount = 0;
+    var w = prompt("Write any word or sentence.");
+    var d = w.toLowerCase();
+    console.log(d);
+    //var alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var vow = [];
+    var finalarray = [];
+
+    for (var t=0; t<=d.length; t++)
+    { //to pick out vowels
+        var y = d.charAt(t);
+
+        pickVowel();
+       
+        //char_count();
+    }
+    getFrequency(d);
+    finalarray.push(vow);
+    finalarray.push(dupCount);
+   
+    //console.log(alpha);//just for testing remove this later
+    console.log(finalarray);
+</script>
 </body>
 </html>
